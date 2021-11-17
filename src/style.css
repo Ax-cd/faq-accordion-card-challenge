@@ -15,12 +15,6 @@ The designs were created to the following widths:
 - Very dark desaturated blue: hsl(238, 29%, 16%)
 - Soft red: hsl(14, 88%, 65%)
 
-#### Gradient
-
-Background gradient:
-
-- Soft violet: hsl(273, 75%, 66%)
-- Soft blue: hsl(240, 73%, 65%)
 
 ### Neutral
 
@@ -37,12 +31,7 @@ Background gradient:
 
 ### Body Copy
 
-- Font size: 12px
-
-### Font
-
-- Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
-- Weights: 400, 700 */
+- Font size: 12px */
 
 
 
@@ -50,14 +39,85 @@ Background gradient:
 /* What could I use to complete the challenge without js? */
 
 
+/* MOBILE-FIRST WORKFLOW */
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+* {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body {
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)) repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* font-size: 62.5%; */
+}
+
+
+
+section {
+    /* box-shadow */
+    /* border-radius */
+    /* border: 2px solid rgb(182, 22, 22); */
+    background: white;
+    max-width: 80%;
+    padding: 1rem;
+}
 
 
 
 
 
+/* .images {
+
+} */
 
 
 
 
-/* .attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); } */
+
+h1 {
+    color: hsl(238, 29%, 16%);
+}
+
+
+
+
+
+.question {
+    color: hsl(237, 12%, 33%);
+}
+.question:hover {
+    color: hsl(14, 88%, 65%);
+}
+/* when question is selected*/
+/* .question {
+    color: hsl(238, 29%, 16%);
+    font-weight: 700;
+} */
+
+
+.answer {
+    color: hsl(240, 6%, 50%);
+}
+
+
+.line-breaker {
+    width: 100%;
+    height: 3px;
+    color: hsl(240, 5%, 91%);
+    /* padding: 1rem; */
+}
+
+
+.attribution {
+    /* font-size: 11px; */
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
