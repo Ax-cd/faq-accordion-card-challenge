@@ -3,8 +3,8 @@
 
 The designs were created to the following widths:
 
-- Mobile: 375px
-- Desktop: 1440px
+- Mobile: 375px * 768
+- Desktop: 1440px * 768
 
 ## Colors
 
@@ -31,7 +31,7 @@ The designs were created to the following widths:
 
 ### Body Copy
 
-- Font size: 12px */
+- Font size: 12px*/
 
 
 
@@ -54,27 +54,49 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* font-size: 62.5%; */
+    font-size: 62.5%;
 }
 
 
 
-section {
-    /* box-shadow */
-    /* border-radius */
+.main {
     /* border: 2px solid rgb(182, 22, 22); */
     background: white;
     max-width: 80%;
-    padding: 1rem;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px hsla(238, 29%, 16%, 0.5);
 }
 
 
-
-
-
 /* .images {
-
+    border: 2px solid rgb(235, 134, 134);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 9.5vh;
+    height: 10rem;
+    margin-bottom: 3rem;
 } */
+
+.illustration-woman {
+    border: 2px solid lightcoral;
+    position: relative;
+    top: -9.5rem;
+
+}
+.bg-pattern {
+    border: 2px solid blueviolet;
+    position: absolute;
+    left: 4rem;
+    top: 5rem;
+    margin-bottom: -3rem;
+}
+
+
 
 
 
@@ -82,6 +104,7 @@ section {
 
 h1 {
     color: hsl(238, 29%, 16%);
+    font-size: 1.2rem;
 }
 
 
