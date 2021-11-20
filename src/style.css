@@ -63,7 +63,7 @@ body {
     /* border: 2px solid rgb(182, 22, 22); */
     background: white;
     max-width: 80%;
-    padding: 0 1.5rem 2rem 1.5rem;
+    padding: 0 1.5rem 2.5rem 1.5rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px hsla(236, 8%, 39%, 0.5);
 }
@@ -84,10 +84,10 @@ body {
 /* } */
 
 .illustration-woman {
-    margin-top: -7.9rem;
+    margin-top: -7rem;
 }
 .bg-pattern {
-    margin-top: -5.5rem;
+    margin-top: -5rem;
     width: 100%;
 }
 
@@ -106,18 +106,20 @@ h1 {
 .question {
     /* border: 2px solid green; */
     color: hsl(237, 12%, 33%);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     border-bottom: 1px solid hsla(240, 6%, 50%, 0.3);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    margin-top: 0.5rem;
 }
 .question:hover {
     color: hsl(14, 88%, 65%);
 }
-/* when question is selected*/
+/* when question is clicked*/
 /* .question: {
     color: hsl(238, 29%, 16%);
     font-weight: 700;
@@ -127,11 +129,14 @@ h1 {
     /* border: 1px solid palevioletred; */
     /* arrow up when clicked */
     align-self: center;
+    margin-left: 1rem;
 }
 
 .answer {
     color: hsl(240, 6%, 50%);
     font-size: 0.8rem;
+    /* display: none; */
+    /* when display: none is active, the project lose capacity to adjust on browsers for some reason */
 }
 
 
