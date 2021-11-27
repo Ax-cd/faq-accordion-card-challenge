@@ -39,19 +39,37 @@ body {
     border-radius: 15px;
     box-shadow: 0 10px 30px hsla(236, 8%, 39%, 0.5);
 }
+@media (min-width: 40em) {
+    .main {
+        display: flex;
+        max-width: 60%;
+    }
+}
 
 
 
 .illustration-woman {
-    /* border: 1px solid salmon; */
-    margin-top: -7rem;
-    /* position: inherit; */
+    border: 1px solid salmon;
+    /* margin-top: -7rem; */
+    display: inline-block;
+    object-position: top right;
 }
 .bg-pattern {
-    /* border: 1px solid green; */
-    margin-top: -5rem;
-    width: 100%;
+    border: 1px solid green;
+    /* margin-top: -5rem; */
+    /* width: 100%; */
+    /* float: inline-end; */
 }
+/* @media (min-width: 40em) {
+    .illustration-woman {
+        display: url(images/illustration-woman-online-desktop.svg);
+        width: 100%;
+    }
+    .bg-pattern {
+        display: url(images/bg-pattern-desktop.svg);
+        width: 100%;
+    }
+} */
 
 
 /* FAQ CONTENT */
