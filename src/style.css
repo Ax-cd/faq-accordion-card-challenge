@@ -66,6 +66,8 @@ body {
         left: 10rem;
         min-width: 55%;
         max-width: 55%;
+        min-height: 65%;
+        max-height: 65%;
         overflow: hidden;
     }
     .illustration-woman-desktop {
