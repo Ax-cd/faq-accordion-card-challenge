@@ -7,60 +7,55 @@
       
       <title>FAQ accordion card | Frontend Mentor Challenge</title>
       <link rel="stylesheet" href="src/style.css">
-      <script src="src/index.js"></script>
   </head>
-
   <body>
+    <main class="main">
 
-    <section role="main" class="main">
+      <div class="img-mobile">
+        <img class="illustration-woman" src="src/images/illustration-woman-online-mobile.svg" alt="">
+        <img class="bg-pattern" src="src/images/bg-pattern-mobile.svg" alt="">  
+      </div>
 
-      <img class="illustration-woman" src="src/images/illustration-woman-online-mobile.svg" alt="">
-      <img class="bg-pattern" src="src/images/bg-pattern-mobile.svg" alt="">
-
-      <img class="illustration-woman-desktop" src="src/images/illustration-woman-online-desktop.svg" alt="">
-      <img class="illustration-box-desktop" src="src/images/illustration-box-desktop.svg" alt="">
-      <img class="bg-pattern-desktop" src="src/images/bg-pattern-desktop.svg" alt="">
-  
-      <!-- all tabs must me in an element with role="tablist" -->
-      <!-- see also attribute aria-selected (if tab active) and aria-controls -->
-
-      <h1>FAQ</h1>
+      <div class="img-desktop">
+        <img class="illustration-woman-desktop" src="src/images/illustration-woman-online-desktop.svg" alt="">
+        <img class="illustration-box-desktop" src="src/images/illustration-box-desktop.svg" alt="">
+        <img class="bg-pattern-desktop" src="src/images/bg-pattern-desktop.svg" alt="">  
+      </div>
       
-      <section class="tablist" role="tablist">
-        <button role="tab" class="accordion">How many team members can I invite?</button>
-        <div role="tabpanel" class="panel">
-          <p>You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
-        </div>
+      <section class="faq">
+        <h1>FAQ</h1>
+
+        <details>
+          <summary class="question">How many team members can I invite?</summary>
+          <p class="answer">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</p>
+        </details>
   
-        <button role="tab" class="accordion">What is the maximum file upload size?</button>
-        <div role="tabpanel" class="panel">
-          <p>No more than 2GB. All files in your account must fit your allotted storage space.</p>
-        </div>
+        <details>
+          <summary class="question">What is the maximum file upload size?</summary>
+          <p class="answer">No more than 2GB. All files in your account must fit your allotted storage space.</p>
+        </details>
   
-        <button role="tab" class="accordion">How do I reset my password?</button>
-        <div role="tabpanel" class="panel">
-          <p>Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
-        </div>
+        <details>
+          <summary class="question">How do I reset my password?</summary>
+          <p class="answer">Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</p>
+        </details>
   
-        <button role="tab" class="accordion">Can I cancel my subscription?</button>
-        <div role="tabpanel" class="panel">
-          <p>Yes! Send us a message and we’ll process your request no questions asked.</p>
-        </div>
+        <details>
+          <summary class="question">Can I cancel my subscription?</summary>
+          <p class="answer">Yes! Send us a message and we’ll process your request no questions asked.</p>
+        </details>
   
-        <button role="tab" class="accordion">Do you provide additional support?</button>
-        <div role="tabpanel" class="panel">
-          <p>Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
-        </div>
+        <details>
+          <summary class="question">Do you provide additional support?</summary>
+          <p class="answer">Chat and email support is available 24/7. Phone lines are open during normal business hours.</p>
+        </details>
       </section>
+    </main>
 
-    </section>
-
-    <!-- <div role="contentinfo" class="attribution">
-      <img src="images/favicon-32x32.png" alt="Frontend Mentor logo">
+    <footer class="hidden">
+      <img src="/src/images/favicon-32x32.png" alt="Frontend Mentor logo">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://www.frontendmentor.io/profile/Ax-cd">Ax-cd</a>.
-    </div> -->
-
+    </footer>
   </body>
-
 </html>

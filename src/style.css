@@ -1,22 +1,17 @@
-/* # Front-end Style Guide
-## Layout
-
+/*
 The designs were created to the following widths:
 
 - Mobile: 375px * 768
 - Desktop: 1440px * 768 */
 
 /* MOBILE-FIRST WORKFLOW */
-
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 * {
     font-family: 'Kumbh Sans', sans-serif;
 }
-
 body {
-    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)) repeat;
-    /* !color at the bottom on wider screens! */
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%)) no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -24,68 +19,98 @@ body {
     min-height: 100vh;
 }
 
-
-
 .main {
     background: white;
+    min-width: 80%;
     max-width: 80%;
-    padding: 0 1.5rem 3rem 1.5rem;
+    min-height: 90%;
+    padding: 6.5rem 1.5rem 3rem;
+    margin: 2rem 0;
     border-radius: 15px;
-    box-shadow: 0 10px 30px hsla(236, 8%, 39%, 0.5);
+    box-shadow: 0 10px 30px hsla(234, 25%, 23%, 0.8);
 }
 @media (min-width: 40em) {
     .main {
+        /* border: 5px solid yellow; */
         display: flex;
-        justify-content: space-between;
-        padding: 2rem 1.5rem 2rem 1.5rem;
-        max-width: 70%;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 4rem;
+        min-width: 55%;
+        max-width: 55%;
         min-height: 100%;
+        max-height: 100%;
+        /* z-index: 2; */
     }
 }
 
 /* IMAGES */
-
+.img-mobile {
+    /* border: 2px solid red; */
+    position: absolute;
+    top: 8.5rem;
+    left: 3.5rem;
+    /* margin-top: 5rem; */
+}
 .illustration-woman {
-    /* border: 1px solid salmon; */
-    margin-top: -8rem;
+    /* border: 2px solid rgb(31, 204, 88); */
+    position: relative;
+    top: -7rem;
+    /* margin-top: -8rem; */
 }
 .bg-pattern {
-    /* border: 1px solid green; */
-    margin-top: -5.5rem;
-    width: 100%;
+    /* border: 2px solid dodgerblue; */
+    /* margin-top: -5.5rem; */
+    /* width: 100%; */
+    position: relative;
+    top: -12rem;
 }
-.illustration-woman-desktop {
-    display: none;
-}
-.illustration-box-desktop {
-    display: none;
-}
-.bg-pattern-desktop {
+.img-desktop {
     display: none;
 }
 @media (min-width: 40em) {
-    .illustration-woman {
+    .img-mobile {
         display: none;
     }
-    .bg-pattern {
-        display: none;
+    .img-desktop {
+        /* border: 2px solid hsl(0, 100%, 50%); */
+        display: block;
+        position: absolute;
+        /* top: 14rem;
+        left: 10rem; */
+        /* width: 100%;
+        height: 100%; */
+        /* width: 50%;
+        height: 60%; */
+        min-width: 55%;
+        max-width: 55%;
+        /* min-height: 64.5%;
+        max-height: 64.5%; */
+        top: 9rem;
+        left: 10rem;
+        overflow: hidden;
     }
     .illustration-woman-desktop {
-        display: inline;
-        margin-left: -8rem;
+        /* border: 2px solid rgb(12, 212, 22); */
+        position: relative;
+        top: 5rem;
+        left: 1.5rem;
+        z-index: 2;
+        /* object-fit: fill; */
     }
     .illustration-box-desktop {
-        display: inline;
-        width: 200px;
-        height: 200px;
-        margin-bottom: -15rem;
-        /* margin-left: -20rem; */
+        /* border: 2px solid rgb(117, 38, 128); */
+        position: relative;
+        top: 2rem;
+        left: -32.2rem;
+        z-index: 3;
     }
     .bg-pattern-desktop {
-        display: inline;
-        width: 200px;
-        height: 200px;
-        margin-left: -30rem;
+        /* border: 2px solid rgb(241, 10, 172); */
+        position: relative;
+        top: -40rem;
+        left: -30rem;
+        z-index: 1;
     }
 }
 
@@ -97,61 +122,73 @@ h1 {
     /* font-size: 1.2rem; */
     text-align: center;
 }
-
 @media (min-width: 40em) {
-    .tablist {
-        max-width: 50%;
+    h1 {
+        text-align: left;
+    }
+    .faq {
+        /* border: 2px solid blue; */
+        min-width: 45%;
+        max-width: 45%;
         align-content: flex-end;
+        /* margin: 2rem 2rem 2rem 20rem; */
     }
 }
 
-.accordion {
+details {
+    border-bottom: 1px solid hsla(240, 6%, 50%, 0.3);
+}
+.question {
     width: 100%;
     border: none;
+    list-style: none;
     color: hsl(237, 12%, 33%);
     font-size: 0.8rem;
     text-align: left;
     background-color: inherit;
     padding: 0.5rem 0 0.5rem 0;
     margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     cursor: pointer;
-    transition: 0.4s;
+    /* transition: 0.4s; */
 }
-.accordion::after {
+.question::after {
     content: url(images/icon-arrow-down.svg);
     float: right;
 }
-.accordion:hover {
+.question:hover {
     color: hsl(14, 88%, 65%);
 }
-
-.accordion.is-open {
+details[open] > .question {
     color: hsl(238, 29%, 16%);
     font-weight: 700;
 }
-.accordion.is-open::after {
+details[open] > .question::after {
     transform: rotate(0.5turn)
 }
 
-.panel {
+.answer {
     color: hsl(240, 6%, 50%);
     font-size: 0.8rem;
     padding-bottom: 0.5rem;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    border-bottom: 1px solid hsla(240, 6%, 50%, 0.3);
+    max-height: 5rem;
+    /* overflow: hidden; */
+    /* animation: opened 0.2s ease-out; */
 }
 
+details[open] summary ~ * { /*doesn't seem to work?*/
+    animation: opened .5s ease-in-out;
+}
+@keyframes opened {
+    0% {opacity: 0; margin-top: -10px;}
+    100% {opacity: 1; margin-top: 0px;}
+}
 
 
 
 
 /* FOOTER */
-.attribution {
-    /* font-size: 11px; */
-    text-align: center;
-}
-.attribution a {
-    color: hsl(228, 45%, 44%);
+.hidden {
+    position: absolute;
+    top: -1000px;
 }
